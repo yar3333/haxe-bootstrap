@@ -2,7 +2,8 @@ package js.bootstrap;
 
 class Editable
 {
-	public static inline function editable(jq:js.JQuery, ?params : { 
+	public static inline function editable(jq:js.JQuery, ?params :
+	{ 
 		  ?ajaxOptions : Dynamic // Additional options for submit ajax request
 		, ?anim : String // Animation speed (inline mode only)
 		, ?autotext : String // auto|always|never
@@ -29,7 +30,8 @@ class Editable
 		, ?url : Dynamic
 		, ?validate : String->String
 		, ?value : Dynamic
-	}) : Void untyped
+	}
+	) : Void untyped
 	{
 		return jq.editable(params);
 	}

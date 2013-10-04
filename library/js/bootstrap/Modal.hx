@@ -9,15 +9,23 @@ typedef ModalOptions =
 
 class Modal
 {
-	public static inline function modal( j : js.JQuery , conf : ModalOptions = null ) : js.JQuery 
-		return untyped j.modal( conf )
+	public static inline function modal(jq:js.JQuery, ?conf:ModalOptions) : js.JQuery 
+	{
+		return untyped jq.modal(conf);
+	}
 	
-	public static inline function modalToggle( j : js.JQuery ) : js.JQuery 
-		return untyped j.modal( "toggle" )
+	public static inline function modalToggle(jq:js.JQuery) : js.JQuery
+	{
+		return untyped jq.modal("toggle");
+	}
 		
-	public static inline function modalShow( j : js.JQuery ) : js.JQuery 
-		return untyped j.modal( "show" )
+	public static inline function modalShow(jq:js.JQuery ) : js.JQuery
+	{
+		return untyped jq.modal("show");
+	}
 	
-	public static inline function modalHide( j : js.JQuery ) : js.JQuery 
-		return untyped j.modal( "hide" )
+	public static inline function modalHide(jq:js.JQuery) : js.JQuery
+	{
+		return untyped jq.modal("hide");
+	}
 }

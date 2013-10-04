@@ -12,15 +12,23 @@ typedef TooltipOptions =
 
 class Tooltip
 {
-	public static inline function tooltip( j : js.JQuery , ?opts:TooltipOptions = null ) : js.JQuery 
-		return untyped j.tooltip( opts )
+	public static inline function tooltip(jq:js.JQuery, ?opts:TooltipOptions) : js.JQuery 
+	{
+		return untyped jq.tooltip(opts);
+	}
 
-	public static inline function tooltipToggle( j : js.JQuery ) : js.JQuery 
-		return untyped j.tooltip( "toggle" )
+	public static inline function tooltipToggle(jq:js.JQuery) : js.JQuery
+	{
+		return untyped jq.tooltip("toggle");
+	}
 		
-	public static inline function tooltipShow( j : js.JQuery ) : js.JQuery 
-		return untyped j.tooltip( "show" )
+	public static inline function tooltipShow(jq:js.JQuery) : js.JQuery 
+	{
+		return untyped jq.tooltip("show");
+	}
 	
-	public static inline function tooltipHide( j : js.JQuery ) : js.JQuery 
-		return untyped j.tooltip( "hide" )
+	public static inline function tooltipHide(jq:js.JQuery) : js.JQuery 
+	{
+		return untyped jq.tooltip("hide");
+	}
 }

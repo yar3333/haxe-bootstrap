@@ -13,16 +13,23 @@ typedef PopoverOptions =
 
 class Popover
 {
-	public static inline function popover( j : js.JQuery , ?opts : PopoverOptions = null ) : js.JQuery {
-		return untyped j.popover( opts );
+	public static inline function popover(jq:js.JQuery, ?opts:PopoverOptions) : js.JQuery
+	{
+		return untyped jq.popover(opts);
 	}
 
-	public static inline function popoverToggle( j : js.JQuery ) : js.JQuery 
-		return untyped j.popover( "toggle" )
+	public static inline function popoverToggle(jq:js.JQuery) : js.JQuery 
+	{
+		return untyped jq.popover("toggle");
+	}
 		
-	public static inline function popoverShow( j : js.JQuery ) : js.JQuery 
-		return untyped j.popover( "show" )
+	public static inline function popoverShow(jq:js.JQuery) : js.JQuery
+	{
+		return untyped jq.popover("show");
+	}
 	
-	public static inline function popoverHide( j : js.JQuery ) : js.JQuery 
-		return untyped j.popover( "hide" )
+	public static inline function popoverHide(jq:js.JQuery) : js.JQuery
+	{
+		return untyped jq.popover("hide");
+	}
 }
