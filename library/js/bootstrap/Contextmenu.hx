@@ -15,7 +15,7 @@ class Contextmenu
 		jq.contextmenu(params);
 	}
 		
-	@:noUsing public inline function closemenu(?e:js.JQuery.JqEvent) : Void untyped __js__("this.closemenu(e)");
-	@:noUsing public inline function destroy() : Void untyped __js__("this.destroy()");
-	@:noUsing public inline function getMenu() : JQuery return untyped __js__("this.getMenu()");
+	public inline function closemenu(?e:js.JQuery.JqEvent) : Void untyped __js__("this.closemenu(e)");
+	public inline function destroy() : Void untyped __js__("this.destroy()");
+	public inline function getMenu() : JQuery return untyped __js__("this.getMenu()");
 }
