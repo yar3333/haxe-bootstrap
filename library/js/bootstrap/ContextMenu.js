@@ -7,6 +7,7 @@
 		this.options = options
 		this.before = this.options.before || this.before
 		this.onItem = this.options.onItem || this.onItem
+		this.onShow = this.options.onShow || this.onShow
 		if (this.options.target) this.$elements.attr('data-target', this.options.target)
 		this.listen()
 	}
@@ -30,10 +31,13 @@
 			
 			var $menu = this.getMenu();
 			
-			$menu.attr('style', '')
-				.css(this.getPosition(e, $menu))
-				.data('_context_this_ref', this)
-				.addClass('open');
+			$menu.attr('style', '');
+			$menu.addClass('open');
+			
+			this.onShow(this);
+			
+			$menu.css(this.getPosition(e, $menu));
+			$menu.data('_context_this_ref', this);
 			return false;
 		},
 		
@@ -50,6 +54,10 @@
 		onItem: function(t, e, context)
 		{
 			return true;
+		},
+		
+		onShow: function(t)
+		{
 		},
 		
 		listen: function()

@@ -14,6 +14,7 @@ extern class ContextMenu
 		  ?target: String
 		, ?before : ContextMenu->js.JQuery.JqEvent->js.JQuery->Bool
 		, ?onItem : ContextMenu->js.JQuery.JqEvent->js.JQuery->Void
+		, ?onShow : ContextMenu->Void
 	}
 	) : ContextMenu
 	{
