@@ -5,16 +5,19 @@
 	{
 		this.$elements = $(elements)
 		this.options = options
+		this.selector = this.options.selector || this.selector;
+		if (this.options.target) this.$elements.attr('data-target', this.options.target);
 		this.before = this.options.before || this.before
 		this.onItem = this.options.onItem || this.onItem
 		this.onShow = this.options.onShow || this.onShow
-		if (this.options.target) this.$elements.attr('data-target', this.options.target)
 		this.listen()
 	}
 	
 	ContextMenu.prototype =
 	{
 		constructor: ContextMenu,
+		
+		selector: null,
 		
 		show: function(e)
 		{
@@ -64,7 +67,14 @@
 		{
 			var self = this;
 			
-			this.$elements.on('contextmenu.context.data-api', $.proxy(this.show, this));
+			if (this.selector)
+			{
+				this.$elements.on('contextmenu.context.data-api', this.selector, $.proxy(this.show, this));
+			}
+			else
+			{
+				this.$elements.on('contextmenu.context.data-api', $.proxy(this.show, this));
+			}
 			$('html').on('click.context.data-api', $.proxy(this.close, this));
 			
 			var $target = $(this.$elements.attr('data-target'));

@@ -11,7 +11,8 @@ extern class ContextMenu
 	
 	static inline function contextmenu(jq:js.JQuery, ?params :
 	{ 
-		  ?target: String
+		  ?selector: String
+		, ?target: String
 		, ?before : ContextMenu->js.JQuery.JqEvent->js.JQuery->Bool
 		, ?onItem : ContextMenu->js.JQuery.JqEvent->js.JQuery->Void
 		, ?onShow : ContextMenu->Void
@@ -21,6 +22,7 @@ extern class ContextMenu
 		return untyped jq.contextmenu(params);
 	}
 		
+	function show(e:JqEvent) : Void;
 	function close() : Void;
 	function destroy() : Void;
 	function getMenu() : JQuery;
