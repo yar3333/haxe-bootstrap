@@ -9,6 +9,11 @@ typedef ModalOptions =
 
 class Modal
 {
+	static function __init__()
+	{
+		untyped __js__("$.fn.modal.Constructor.prototype.enforceFocus = function () {};"); // nested popup bugfix
+	}
+	
 	public static inline function modal(jq:js.JQuery, ?conf:ModalOptions) : js.JQuery 
 	{
 		return untyped jq.modal(conf);
