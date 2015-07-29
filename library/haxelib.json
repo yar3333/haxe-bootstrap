@@ -4,8 +4,8 @@
   "tags": ["html","js"],
   "description": "Twitter bootstrap with plugins.",
   "contributors": ["yar3333"],
-  "releasenote": "ContextMenu: selector support.",
-  "version": "1.0.3",
+  "releasenote": "Nested popup bugfix.",
+  "version": "1.0.4",
   "url": "https://bitbucket.org/yar3333/haxe-bootstrap",
   "dependencies": {}
 }
